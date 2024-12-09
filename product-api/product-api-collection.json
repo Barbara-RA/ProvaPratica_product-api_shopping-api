@@ -1,0 +1,289 @@
+{
+  "info": {
+    "name": "product-api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "/category",
+      "item": [
+        {
+          "name": "GET all categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/category",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["category"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST save category",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Eletrônicos\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/category",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["category"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT update category",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Eletrodomésticos\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/category/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["category", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE category",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/category/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["category", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET categories paginated",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/category/pageable?page=0&size=10",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["category", "pageable"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/product",
+      "item": [
+        {
+          "name": "GET all products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/product",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["product"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET product by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/product/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["product", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST save product",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"productIdentifier\": \"tv\",\n  \"nome\": \"TV\",\n  \"preco\": 1500.0,\n  \"descricao\": \"Uma televisão moderna\",\n  \"category\": {\n    \"id\": \"1\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/product",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["product"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT update product",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Smart TV\",\n  \"preco\": 2000.0,\n  \"descricao\": \"Uma televisão 4K\",\n  \"category\": {\n    \"id\": \"1\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/product/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["product", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE product",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/product/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["product", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET products paginated",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/product/pageable?page=0&size=10",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["product", "pageable"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET products by category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/product/category/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["product", "category", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET product by identifier",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/product/tv/identifier",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["product", "tv", "identifier"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

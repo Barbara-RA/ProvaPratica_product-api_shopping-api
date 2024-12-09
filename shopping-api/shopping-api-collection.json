@@ -1,0 +1,152 @@
+{
+	"info": {
+		"name": "shopping-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET all shops",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/shopping"
+			},
+			"response": []
+		},
+		{
+			"name": "GET shop by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/shopping/1"
+			},
+			"response": []
+		},
+		{
+			"name": "POST save shop",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userIdentifier\": \"user1\",\n  \"items\": [\n    { \"productIdentifier\": \"a1\", \"price\": 100.0 },\n    { \"productIdentifier\": \"a2\", \"price\": 200.0 },\n    { \"productIdentifier\": \"a3\", \"price\": 150.0 }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/shopping"
+			},
+			"response": []
+		},
+		{
+			"name": "GET shops by user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/shopping/shopByUser?userIdentifier=user1"
+			},
+			"response": []
+		},
+		{
+			"name": "GET shops by date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/shopping/shopByDate?startDate=2024-01-01T00:00:00&endDate=2024-12-31T23:59:59"
+			},
+			"response": []
+		},
+		{
+			"name": "GET shops by product identifier",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/shopping/a1"
+			},
+			"response": []
+		},
+		{
+			"name": "GET shops by filter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/shopping/search?startDate=2024-01-01T00:00:00&endDate=2024-12-31T23:59:59&minValue=300"
+			},
+			"response": []
+		},
+		{
+			"name": "GET report by date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/shopping/report?startDate=2024-01-01T00:00:00&endDate=2024-12-31T23:59:59"
+			},
+			"response": []
+		}
+	]
+}
